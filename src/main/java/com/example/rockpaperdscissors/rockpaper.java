@@ -13,8 +13,13 @@ public class rockpaper {
     @Autowired
     ServiceRockPaper serviceRockPaper;
 
+    // api endpoint
     @GetMapping("/rockpaper/{userMove}")
     public String game(@PathVariable("userMove") String usermove){
         return  serviceRockPaper.ComputerMove(usermove);
     }
+
+
+
+
 }
